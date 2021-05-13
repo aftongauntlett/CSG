@@ -23,6 +23,7 @@ export default {
         email: '',
         name: '',
       },
+      text: ""
     }
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <div class="slider container-fluid">
-    <vue-slider v-model="value" />
+    <vue-slider v-model="value" @change="$emit('slide', value)"/>
     <p class="pt-3">Choose your Age</p>
   </div>
 </template>

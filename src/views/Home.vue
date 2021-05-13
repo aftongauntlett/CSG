@@ -21,9 +21,9 @@
     </div>
 
     <div class="headline pt-5">
-      <h2>GOGGLES FOR COLD WEATHER</h2>
+      <h2 :style="`font-size: ${14 + slideValue}px`">GOGGLES FOR COLD WEATHER</h2>
     </div>
-    <Slider />
+    <Slider @slide="slideValue = $event"/>
     <Contact />
 
   </div>
@@ -37,7 +37,8 @@ export default {
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      slideValue: 0
     }
   },
   methods: {
