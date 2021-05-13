@@ -34,6 +34,7 @@ name: "Clock",
   color: #313131;
   font-size: 25px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   -webkit-animation:colorchange 20s infinite alternate;
 }
 

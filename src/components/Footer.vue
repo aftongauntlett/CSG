@@ -24,7 +24,9 @@
 </template>
 
 <script>
+import Clock from "@/components/Home/Clock";
 export default {
+  components: {Clock}
 };
 </script>
 

@@ -10,15 +10,16 @@
             max-rows="6"
         ></b-form-textarea>
         <pre class="mt-3 mb-0">{{ text }}</pre>
-    <div class="d-flex justify-content-center pb-5 pt-2">
-        <b-button class="formButton" type="submit" variant="primary">Submit</b-button>
-    </div>
-
+      <div class="d-flex justify-content-center pb-5 pt-2">
+          <b-button class="formButton" type="submit" variant="primary">Submit</b-button>
+      </div>
     </div>
 </template>
 
 <script>
+import Clock from "@/components/Home/Clock";
 export default {
+  components: {Clock},
   data() {
     return {
       form: {
@@ -66,5 +67,14 @@ export default {
 
 .contactForm {
   max-width: 700px;
+}
+
+.contactUs {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #6b6d7a;
 }
 </style>

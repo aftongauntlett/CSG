@@ -15,7 +15,10 @@
 </template>
 
 <script>
-export default {};
+import Clock from "@/components/Home/Clock";
+export default {
+  components: {Clock}
+};
 </script>
 
 <style scoped>
