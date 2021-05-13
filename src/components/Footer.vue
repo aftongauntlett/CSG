@@ -9,14 +9,14 @@
       </b-col>
 
       <b-col sm>
-        <p class="pt-4"><strong>CONTACT US</strong></pclass>
+        <p class="pt-4"><strong>CONTACT US</strong></p>
         <p>555-555-5555</p>
         <p>Fake@email.com</p>
       </b-col>
     </b-row>
-    <img :to="{ name: 'Home' }" class="footerIcon" :src="require('@/assets/Images/32_logo.png')" alt="32 Degree Optical Logo">
+    <img :to="{ name: 'Home' }" class="footerIcon" :src="require('@/assets/Images/32_logo.png')" alt="32 Degree Optics Logo">
   </b-container>
-    <div class="footerFont">&copy;2021 Copyright 32° Optical</div>
+    <div class="footerFont">&copy;2021 Copyright 32° Optics</div>
 </div>
 
 
@@ -24,7 +24,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style scoped>
@@ -33,7 +34,6 @@ export default {};
   padding-top: 30px;
   text-align: center;
   border-top: solid #c8cacd 1px;
-
 }
 
 .footer {

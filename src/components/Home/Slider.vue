@@ -1,7 +1,6 @@
 <template>
   <div class="slider container-fluid">
     <vue-slider v-model="value" @change="$emit('slide', value)"/>
-    <p class="pt-3">Choose your Age</p>
   </div>
 </template>
 
@@ -24,7 +23,7 @@ export default {
 <style>
 .slider {
   max-width: 500px;
-  padding-top: 40px;
+  padding-top: 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 

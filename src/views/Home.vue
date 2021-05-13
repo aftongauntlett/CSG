@@ -21,10 +21,11 @@
     </div>
 
     <div class="headline pt-5">
-      <h2 :style="`font-size: ${14 + slideValue}px`">GOGGLES FOR COLD WEATHER</h2>
+      <h2 :style="`font-size: ${14 + slideValue}px`">SLIDE TO CHANGE MY SIZE</h2>
     </div>
     <Slider @slide="slideValue = $event"/>
     <Contact />
+    <Clock />
 
   </div>
 </template>
@@ -32,8 +33,9 @@
 <script>
 import Contact from "@/components/Home/Contact";
 import Slider from "@/components/Home/Slider";
+import Clock from "@/components/Home/Clock";
 export default {
-  components: {Slider, Contact},
+  components: {Clock, Slider, Contact},
   data() {
     return {
       slide: 0,
