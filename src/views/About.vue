@@ -58,7 +58,7 @@ export default {
 
 <style>
 .carouselImages {
-  opacity: 80%;
+  opacity: 0.8;
   box-shadow: 5px 5px 15px 5px #bed3dd;
   background-color: unset;
   max-width: 800px;

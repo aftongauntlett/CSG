@@ -172,7 +172,7 @@ h2 {
   color: #3a445d;
   padding: 20px;
   border: 1px solid #3a445d !important;
-  opacity: 90%;
+  opacity: 0.9;
 }
 
 .ptext .border.trans {

@@ -1,4 +1,4 @@
-# CSG Test
+# CSG Example Website Build
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/aftongauntlett/vue-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,8 +7,10 @@
 ## About
 
 **Github Repo:** 
+https://github.com/aftongauntlett/CSG
 
 **Deployed:** 
+https://csg-gauntlett.web.app/#/
 
 ## Tech Stack
 
@@ -23,7 +25,7 @@ Test page built using the following technologies:
 
 ## Screenshot
 
-![Screenshot](https____)
+![Screenshot](https://i.imgur.com/8VrCQr0.jpg)
 
 ## License
 
