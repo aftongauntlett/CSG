@@ -10,10 +10,37 @@
       <div class="container">
         <Clock />
       </div>
+      <b-container class="bv-example-row">
+        <b-row>
+          <b-col class="cards p-5">
+            <b-icon class="drop pb-5" style="width: 100px; height: 100px;" icon="droplet-fill" animation="cylon-vertical"></b-icon>
+            <br>
+              <p class="description"><Strong>GOGGLES</Strong></p>
+            <br>Quisque efficitur augue non ex eleifend vulputate. Vivamus posuere leo magna, aliquam placerat erat sollicitudin vitae. Etiam a accumsan mauris.</b-col>
+          <b-col class="cards p-5">
+            <b-icon class="drop pb-5" style="width: 100px; height: 100px;" icon="droplet-half" animation="cylon-vertical"></b-icon>
+            <br>
+              <p class="description"><Strong>RX GOGGLES</Strong></p>
+            <br>Quisque efficitur augue non ex eleifend vulputate. Vivamus posuere leo magna, aliquam placerat erat sollicitudin vitae. Etiam a accumsan mauris.</b-col>
+          <b-col class="cards p-5">
+            <b-icon class="drop pb-5" style="color: #d8e7ee; width: 100px; height: 100px;" icon="droplet" animation="cylon-vertical"></b-icon>
+            <br>
+              <p class="description"><Strong>SUNGLASSES</Strong></p>
+            <br>Quisque efficitur augue non ex eleifend vulputate. Vivamus posuere leo magna, aliquam placerat erat sollicitudin vitae. Etiam a accumsan mauris.</b-col>
+        </b-row>
+          <div class="pt-4">
+            <b-button
+              v-for="link in links"
+              :key="link.link"
+              :to="{ name: link.link }"
+              class="formButton">
+              LEARN MORE
+            </b-button>
+          </div>
+      </b-container>
     </section>
 
     <div class="pimg2"></div>
-
     <section class="section section-dark">
       <h2>CONTACT US</h2>
       <Contact />
@@ -32,7 +59,10 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      slideValue: 0
+      slideValue: 0,
+      links: [
+        { name: "About", link: "About" },
+      ]
     }
   },
   methods: {
@@ -48,6 +78,38 @@ export default {
 
 <style>
 
+.formButton {
+  background-color: #d8e7ee !important;
+  color: black !important;
+  font-size: 20px !important;
+  font-family: 'Montserrat', sans-serif;
+  border: unset !important;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  padding: 15px !important;
+}
+
+.formButton:hover {
+  background-color: #afcbe7 !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  border: unset;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+}
+.cards {
+  background-color: #afcbe7;
+  margin: 15px;
+  box-shadow: 5px 5px 15px 5px #c2d2d6;
+}
+
+.drop {
+  color: #d8e7ee !important;
+}
+
 .pimg1, .pimg2, .pimg3 {
   position: relative;
   opacity: 0.70;
@@ -56,10 +118,10 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 .pimg1 {
   background-image: url("https://images.unsplash.com/photo-1614358536373-1ce27819009e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80");
   min-height: 70vh;
-
 }
 
 .pimg2 {
@@ -98,15 +160,19 @@ h2 {
   width: 100%;
   text-align: center;
   color: #000;
-  font-size: 27px;
+  font-size: 40px;
   letter-spacing: 8px;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .ptext .border {
-  background-color: #111;
-  color: #f5f5f8;
+  background-color: #ecf0f1;
+  color: #3a445d;
   padding: 20px;
+  border: 1px solid #3a445d !important;
+  opacity: 90%;
 }
 
 .ptext .border.trans {

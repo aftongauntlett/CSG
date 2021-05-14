@@ -6,7 +6,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.config.productionTip = false
 
-const firebaseConfig = "./firebase.config.js"
+const firebaseConfig = {
+  apiKey: "AIzaSyArp_Hc-h2hIIp-slSKvldVcQWwJTPVYtA",
+  authDomain: "csg-gauntlett.firebaseapp.com",
+  projectId: "csg-gauntlett",
+  storageBucket: "csg-gauntlett.appspot.com",
+  messagingSenderId: "434729807740",
+  appId: "1:434729807740:web:9c65b03c9bd1498b26fef9"
+};
 
 import firebase from "firebase";
 firebase.initializeApp(firebaseConfig)

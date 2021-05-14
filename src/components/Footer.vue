@@ -11,7 +11,7 @@
       <b-col sm>
         <p class="pt-4"><strong>CONTACT US</strong></p>
         <p>555-555-5555</p>
-        <p>Fake@email.com</p>
+        <a href="mailto:aftonasmith@gmail.com">Fake@Random.com</a>
       </b-col>
     </b-row>
     <img :to="{ name: 'Home' }" class="footerIcon" :src="require('@/assets/Images/32_logo.png')" alt="32 Degree Optics Logo">

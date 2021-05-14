@@ -1,49 +1,48 @@
 <template>
-  <div class="contactForm container-fluid pt-5">
-    <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-      <div class="mt-2">{{ text }}</div>
+  <b-form class="contactForm container-fluid pt-5" @submit="onSubmit">
+    <b-form-input class="mb-4" v-model="form.name" placeholder="Enter your name" ></b-form-input>
         <b-form-textarea
-            id="textarea"
-            v-model="text"
-            placeholder="Enter something..."
+            class="mb-4"
+            id="textarea-large"
+            v-model="form.text"
+            placeholder="Send us a Message"
             rows="3"
             max-rows="6"
         ></b-form-textarea>
-        <pre class="mt-3 mb-0">{{ text }}</pre>
       <div class="d-flex justify-content-center pb-5 pt-2">
-          <b-button class="formButton" type="submit" variant="primary">Submit</b-button>
+          <b-button class="formButton" type="submit" variant="primary" v-b-modal.my-modal>SUBMIT</b-button>
+        <b-modal id="my-modal">Thank you!</b-modal>
       </div>
-    </div>
+    </b-form>
 </template>
 
 <script>
 import Clock from "@/components/Home/Clock";
+import firebase from "firebase"
 export default {
   components: {Clock},
   data() {
     return {
       form: {
-        email: '',
+       text: '',
         name: '',
       },
-      text: ""
     }
   },
   methods: {
     onSubmit(event) {
       event.preventDefault()
-      alert(JSON.stringify(this.form))
+      firebase.auth().signInAnonymously()
+      firebase.database().ref("contactForm").push(this.form)
+      event.target.reset();
     },
+
+
     onReset(event) {
       event.preventDefault()
       // Reset our form values
-      this.form.email = ''
+      this.form.text = ''
       this.form.name = ''
-      // Trick to reset/clear native browser form validation state
-      this.show = false
-      this.$nextTick(() => {
-        this.show = true
-      })
     }
   }
 }
@@ -56,6 +55,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
   border: unset !important;
   margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 
 .formButton:hover {
