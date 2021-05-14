@@ -1,7 +1,12 @@
 <template>
   <b-navbar toggleable="md" type="light" variant="light" sticky>
-    <b-navbar-brand class="navbar"></b-navbar-brand>
-    <img :to="{ name: 'Home' }" class="navIcon" :src="require('@/assets/Images/32_logo.png')" alt="32 Degree Optical Logo">
+    <b-navbar-brand class="navbar" to="/">
+
+    <img
+         class="navIcon"
+         :src="require('@/assets/Images/32_logo.png')"
+         alt="32 Degree Optical Logo">
+    </b-navbar-brand>
     <b-navbar-toggle target="navbar-toggle-collapse">
     </b-navbar-toggle>
 
@@ -17,7 +22,7 @@
 <script>
 import Clock from "@/components/Home/Clock";
 export default {
-  components: {Clock}
+  components: {Clock},
 };
 </script>
 

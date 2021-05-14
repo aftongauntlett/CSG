@@ -1,15 +1,23 @@
 <template>
-  <div class="container-fluid d-flex justify-content-center pt-3 pb-3 ">
-    <span class="timer pt-4 pb-4">{{ timeStamp | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}</span>
+  <div class="container-fluid pt-3 pb-3 ">
+    <div class="d-flex justify-content-center ">
+      <span :style="`font-size: ${20 + slideValue}px`" class="timer pt-4 pb-4">{{ timeStamp | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}</span>
+    </div>
+    <div class="d-flex justify-content-center pb-5">
+      <Slider @slide="slideValue = $event"/>
+    </div>
   </div>
 </template>
 
 <script>
+import Slider from "@/components/Home/Slider";
 export default {
 name: "Clock",
+  components: {Slider},
   data() {
     return {
-      timeStamp: ""
+      timeStamp: "",
+      slideValue: 0,
     }
   },
   created() {

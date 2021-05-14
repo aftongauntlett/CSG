@@ -14,7 +14,17 @@
         <a href="mailto:aftonasmith@gmail.com">Fake@Random.com</a>
       </b-col>
     </b-row>
-    <img :to="{ name: 'Home' }" class="footerIcon" :src="require('@/assets/Images/32_logo.png')" alt="32 Degree Optics Logo">
+    <b-button
+        to="/"
+        variant="link"
+        @click.native="scrollToTop">
+    <img
+        class="footerIcon"
+        :src="require('@/assets/Images/32_logo.png')"
+        alt="32 Degree Optics Logo">
+    </b-button>
+
+
   </b-container>
     <div class="footerFont">&copy;2021 Copyright 32° Optics</div>
 </div>
@@ -26,7 +36,12 @@
 <script>
 import Clock from "@/components/Home/Clock";
 export default {
-  components: {Clock}
+  components: {Clock},
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
+  }
 };
 </script>
 

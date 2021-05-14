@@ -1,5 +1,10 @@
 <template>
   <div class="container-fluid pb-5">
+    <div class="aboutUs container pt-3">
+      <h2 class="pb-3 pt-5">ABOUT US</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor magna faucibus lorem facilisis egestas. Suspendisse interdum scelerisque auctor. Nam sit amet sodales ipsum, sit amet malesuada eros. Etiam sed egestas massa, vitae cursus tellus. Phasellus ac mauris rutrum, iaculis lorem nec, auctor metus.</p>
+      <p>Suspendisse at elementum quam. Donec imperdiet rutrum dui, eu tincidunt nisl ornare sed. In massa arcu, aliquam vel semper eget, porta id mi. Mauris maximus nec velit at bibendum. Donec sodales nisl arcu, a ullamcorper nunc bibendum ut. Etiam convallis quam velit, at feugiat nulla pharetra ac. Cras non orci faucibus, mollis enim id, tincidunt felis.</p>
+    </div>
     <div class="container pt-5 d-flex justify-content-center">
       <b-carousel
           class="carouselImages"
@@ -24,11 +29,6 @@
       <h2 :style="`font-size: ${20 + slideValue}px`">SLIDE TO CHANGE MY SIZE</h2>
     </div>
     <Slider @slide="slideValue = $event"/>
-    <div class="aboutUs container pt-3">
-      <h2 class="pb-3 pt-5">ABOUT US</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor magna faucibus lorem facilisis egestas. Suspendisse interdum scelerisque auctor. Nam sit amet sodales ipsum, sit amet malesuada eros. Etiam sed egestas massa, vitae cursus tellus. Phasellus ac mauris rutrum, iaculis lorem nec, auctor metus.</p>
-      <p>Suspendisse at elementum quam. Donec imperdiet rutrum dui, eu tincidunt nisl ornare sed. In massa arcu, aliquam vel semper eget, porta id mi. Mauris maximus nec velit at bibendum. Donec sodales nisl arcu, a ullamcorper nunc bibendum ut. Etiam convallis quam velit, at feugiat nulla pharetra ac. Cras non orci faucibus, mollis enim id, tincidunt felis.</p>
-    </div>
   </div>
 </template>
 
